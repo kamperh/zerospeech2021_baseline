@@ -10,7 +10,7 @@ described in [The Zero Resource Speech Benchmark 2021: Metrics and baselines for
 
 * First clone this repository:
 
-      git clone https://github.com/bootphon/zerospeech2021_baseline
+      git clone https://github.com/kamperh/zerospeech2021_baseline
       cd zerospeech2021_baseline
 
 * Download the checkpoints in the `checkpoints` directory:
