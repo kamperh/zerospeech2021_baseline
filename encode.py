@@ -98,6 +98,10 @@ def encode_dataset(args):
 
     # for path in tqdm(sorted(list(dataset_dir.rglob("*.flac")))):
     for path in tqdm(sorted(list(dataset_dir.rglob("*.wav")))):
+
+        # # Temp
+        # if (out_dir/"indices"/path.stem).with_suffix(".txt").exists():
+        #     continue
         # print(path, output_format)
 
         out_path = (out_dir / path.stem).with_suffix("")

@@ -59,6 +59,17 @@ def main():
                 wav_path.with_suffix(".wav"), sr=16000,
                 offset=start, duration=duration
                 )
+
+            # # Temp
+            # if out_path.with_suffix(".wav").exists():
+            #     continue
+            # print(in_path, start, duration, out_path)
+            # print(wav.shape)
+            # print(wav.shape[0] == 0)
+            if wav.shape[0] == 0:
+                print(f"Warning: Skipping {in_path}")
+                continue
+
             librosa.output.write_wav(
                 out_path.with_suffix(".wav"), wav, sr=16000
                 )
