@@ -13,6 +13,7 @@ from tqdm import tqdm
 import argparse
 import json
 import librosa
+import soundfile as sf
 import sys
 
 
@@ -70,8 +71,11 @@ def main():
                 print(f"Warning: Skipping {in_path}")
                 continue
 
-            librosa.output.write_wav(
-                out_path.with_suffix(".wav"), wav, sr=16000
+            # librosa.output.write_wav(
+            #     out_path.with_suffix(".wav"), wav, sr=16000
+            #     )
+            sf.write(
+                out_path.with_suffix(".wav"), wav, 16000, "PCM_24"
                 )
 
 
